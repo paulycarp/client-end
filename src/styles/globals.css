@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #1D3C90;
+  --color-primary-dark: #0C163B;
+  --color-primary-deep: #0D1623;
+  --color-white: #FEF8EF;
+  --color-secondary: #0870D8;
+  --color-secondary-transparent: rgba(8, 112, 216, 0.75);
+  --color-secondary-transparent2: rgba(1, 1, 24, 0.4);
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+@layer components {
+  .nav-link {
+    @apply  no-underline text-[1.2rem] w-fit
+    font-rale text-home-white py-1 relative after:absolute 
+    after:right-[-4rem] after:top-[0.8rem]
+    after:w-4 after:h-4 after:rounded-full after:bg-home-primaryDeep 
+    after:opacity-0 after:invisible after:transition-all after:duration-[400ms] 
+    after:ease-linear hover:after:opacity-100 hover:after:visible
+  }
+}
+
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+  }
+
+  .clip-parallelogram {
+    clip-path: polygon(0 6%, 90% 0, 81% 100%, 0% 100%);
+  }
+
+  .curve-radius {
+    border-radius: 50%/ 25px 25px 0 0;
+  }
+
+  .halfway-gradient {
+    background-image: linear-gradient(to right, var(--color-primary-deep) 40%, transparent);
+  }
+}
