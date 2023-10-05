@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "test": "mocha test/*.js",
-    "generate-docs": "jsdoc -r src -d docs",
+    "generate-docs": "typedoc -r src -d docs",
     "lint": "next lint"
   },
   "dependencies": {
@@ -25,7 +25,9 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "jsdoc": "^4.0.2",
     "mocha": "^10.2.0",
-    "next": "^13.5.3"
+    "next": "^13.5.3",
+    "typedoc": "^0.25.1"
   }
 }
