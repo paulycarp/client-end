@@ -25,6 +25,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "mocha": "^10.2.0",
     "next": "^13.5.3"
   }
 }
